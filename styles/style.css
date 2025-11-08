@@ -259,6 +259,25 @@ a:focus {
 .hero-visual {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+}
+
+.hero-screenshot {
+  position: relative;
+  width: min(520px, 100%);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(4, 11, 25, 0.45);
+  z-index: 0;
+}
+
+.hero-screenshot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .visual-frame {
@@ -269,6 +288,7 @@ a:focus {
   position: relative;
   width: min(480px, 100%);
   box-shadow: var(--shadow-soft);
+  z-index: 1;
 }
 
 .visual-orbit {
@@ -363,11 +383,22 @@ a:focus {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: var(--shadow-card);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .card:hover {
   transform: translateY(-6px);
   border-color: rgba(0, 114, 255, 0.4);
+}
+
+.card-illustration {
+  width: 100%;
+  border-radius: 18px;
+  max-height: 190px;
+  object-fit: cover;
+  box-shadow: 0 20px 36px rgba(4, 11, 25, 0.35);
 }
 
 .card h3 {
@@ -393,14 +424,21 @@ a:focus {
   border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 2rem;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.5rem;
 }
 
 .product-panel.highlight {
   background: linear-gradient(160deg, rgba(0, 114, 255, 0.15), rgba(14, 29, 48, 0.95));
   border-color: rgba(0, 114, 255, 0.4);
+}
+
+.panel-image {
+  width: 100%;
+  border-radius: 16px;
+  max-height: 220px;
+  object-fit: cover;
+  box-shadow: 0 22px 40px rgba(0, 114, 255, 0.22);
 }
 
 .feature-list {
@@ -458,6 +496,14 @@ a:focus {
   margin-top: 3rem;
 }
 
+.persona-image {
+  width: 100%;
+  border-radius: 18px;
+  max-height: 200px;
+  object-fit: cover;
+  box-shadow: 0 20px 38px rgba(4, 11, 25, 0.34);
+}
+
 .roi-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -478,6 +524,16 @@ a:focus {
   border-radius: 22px;
   padding: 2rem;
   box-shadow: 0 15px 40px rgba(249, 196, 73, 0.22);
+  display: grid;
+  gap: 1.2rem;
+}
+
+.case-image {
+  width: 100%;
+  border-radius: 18px;
+  max-height: 220px;
+  object-fit: cover;
+  box-shadow: 0 24px 44px rgba(249, 196, 73, 0.32);
 }
 
 .inline-link {
@@ -490,6 +546,19 @@ a:focus {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 3rem;
+}
+
+.pricing-visual {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-visual img {
+  width: min(860px, 100%);
+  border-radius: 28px;
+  object-fit: cover;
+  box-shadow: 0 30px 60px rgba(4, 11, 25, 0.38);
 }
 
 .pricing-card {
@@ -546,6 +615,14 @@ a:focus {
   gap: 1rem;
 }
 
+.resource-image {
+  width: 100%;
+  border-radius: 16px;
+  max-height: 200px;
+  object-fit: cover;
+  box-shadow: 0 18px 36px rgba(4, 11, 25, 0.32);
+}
+
 .resource-type {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
@@ -557,6 +634,17 @@ a:focus {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 2rem;
+}
+
+.company-media {
+  margin-top: 2rem;
+}
+
+.company-media img {
+  width: 100%;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 24px 50px rgba(4, 11, 25, 0.4);
 }
 
 .company-list {
@@ -573,6 +661,17 @@ a:focus {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2.5rem;
   align-items: start;
+}
+
+.demo-media {
+  margin-top: 2.5rem;
+}
+
+.demo-media img {
+  width: 100%;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 22px 44px rgba(0, 114, 255, 0.32);
 }
 
 .demo-benefits {
@@ -901,6 +1000,12 @@ a:focus {
 
   .hero-visual {
     order: -1;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-screenshot {
+    margin: 0;
   }
 
   .roi-grid,
@@ -947,6 +1052,16 @@ a:focus {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-screenshot,
+  .pricing-visual img {
+    width: 100%;
+  }
+
+  .company-media,
+  .demo-media {
+    margin-top: 1.5rem;
   }
 
   .announcement-bar .container {
