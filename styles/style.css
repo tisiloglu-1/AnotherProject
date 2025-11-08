@@ -520,7 +520,8 @@ a:focus {
 }
 
 .roi-insights {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -557,34 +558,45 @@ a:focus {
   color: rgba(243, 247, 255, 0.75);
 }
 
-.proof-card {
-  background: linear-gradient(160deg, rgba(249, 196, 73, 0.2), rgba(14, 29, 48, 0.95));
+.testimonials {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.testimonial-grid {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.testimonial-card {
+  background: linear-gradient(160deg, rgba(249, 196, 73, 0.2), rgba(14, 29, 48, 0.96));
   border: 1px solid rgba(249, 196, 73, 0.4);
-  border-radius: 22px;
-  padding: 2rem;
+  border-radius: 24px;
+  padding: 2.2rem;
   box-shadow: 0 18px 44px rgba(249, 196, 73, 0.24);
   display: grid;
   gap: 1rem;
 }
 
-.proof-title {
+.testimonial-title {
   font-weight: 600;
   font-size: 0.95rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(243, 247, 255, 0.72);
+  color: rgba(243, 247, 255, 0.7);
 }
 
-.proof-card blockquote {
+.testimonial-card blockquote {
   margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: rgba(243, 247, 255, 0.9);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: rgba(243, 247, 255, 0.92);
 }
 
-.proof-meta {
-  font-size: 0.9rem;
-  color: rgba(243, 247, 255, 0.75);
+.testimonial-meta {
+  font-size: 0.92rem;
+  color: rgba(243, 247, 255, 0.78);
 }
 
 .inline-link {
@@ -998,6 +1010,10 @@ a:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1079,7 +1095,8 @@ a:focus {
   .solutions-grid,
   .pricing-grid,
   .resource-grid,
-  .roi-overview {
+  .roi-overview,
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
