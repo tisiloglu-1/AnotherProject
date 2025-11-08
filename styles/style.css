@@ -404,21 +404,14 @@ a:focus {
   border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 2rem;
   border-radius: 20px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
 .product-panel.highlight {
   background: linear-gradient(160deg, rgba(0, 114, 255, 0.15), rgba(14, 29, 48, 0.95));
   border-color: rgba(0, 114, 255, 0.4);
-}
-
-.panel-image {
-  width: 100%;
-  border-radius: 16px;
-  max-height: 220px;
-  object-fit: cover;
-  box-shadow: 0 22px 40px rgba(0, 114, 255, 0.22);
 }
 
 .feature-list {
