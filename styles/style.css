@@ -259,25 +259,6 @@ a:focus {
 .hero-visual {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  gap: 2rem;
-}
-
-.hero-screenshot {
-  position: relative;
-  width: min(520px, 100%);
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 30px 60px rgba(4, 11, 25, 0.45);
-  z-index: 0;
-}
-
-.hero-screenshot img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .visual-frame {
@@ -288,7 +269,6 @@ a:focus {
   position: relative;
   width: min(480px, 100%);
   box-shadow: var(--shadow-soft);
-  z-index: 1;
 }
 
 .visual-orbit {
