@@ -354,6 +354,87 @@ a:focus {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 3rem;
+  align-items: end;
+}
+
+.pillar-card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.pillar-structure {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  width: 100%;
+  max-width: 260px;
+  gap: 0.8rem;
+}
+
+.pillar-cap {
+  width: 72%;
+  height: 16px;
+  border-radius: 16px 16px 6px 6px;
+  background: linear-gradient(135deg, rgba(0, 114, 255, 0.4), rgba(14, 26, 43, 0.95));
+  box-shadow: 0 10px 18px rgba(0, 114, 255, 0.18);
+}
+
+.pillar-body {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(18, 35, 58, 0.96), rgba(8, 16, 30, 0.94));
+  border: 1px solid rgba(0, 114, 255, 0.22);
+  border-radius: 26px;
+  padding: 1.8rem 1.6rem;
+  display: grid;
+  gap: 1.1rem;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 114, 255, 0.18);
+}
+
+.pillar-body h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.pillar-body p {
+  margin: 0;
+  color: rgba(243, 247, 255, 0.7);
+}
+
+.pillar-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  color: rgba(243, 247, 255, 0.68);
+  text-align: left;
+}
+
+.pillar-body ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.pillar-body ul li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 114, 255, 0.7);
+  margin-top: 0.35rem;
+}
+
+.pillar-base {
+  width: 92%;
+  height: 18px;
+  border-radius: 6px 6px 16px 16px;
+  background: linear-gradient(180deg, rgba(0, 114, 255, 0.22), rgba(6, 11, 20, 0.95));
+  box-shadow: 0 12px 20px rgba(0, 114, 255, 0.16);
 }
 
 .card {
