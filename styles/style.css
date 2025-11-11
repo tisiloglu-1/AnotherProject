@@ -214,7 +214,7 @@ a:focus {
 
 .hero {
   position: relative;
-  padding-top: clamp(6rem, 10vw, 9rem);
+  padding-top: clamp(5rem, 8vw, 7rem);
   overflow: hidden;
   color: var(--color-text);
 }
@@ -447,7 +447,7 @@ a:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.3rem;
   text-align: center;
   box-shadow: 0 35px 70px rgba(0, 114, 255, 0.2);
   position: relative;
@@ -2021,6 +2021,21 @@ footer.site-footer {
   .hero-chart-bg {
     width: 100%;
   }
+}
+
+.pillar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  font-size: 1.65rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 24px rgba(4, 11, 25, 0.28);
+  backdrop-filter: blur(4px);
 }
 
 
