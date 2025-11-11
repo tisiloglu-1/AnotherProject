@@ -84,7 +84,8 @@
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-visual-stack">
+          <div class="hero-visual-bg"></div>
+          <div class="hero-visual-column">
             <article class="hero-card hero-forecast">
               <div class="hero-card-header">
                 <span>Enterprise forecast</span>
@@ -112,58 +113,60 @@
                 </div>
               </div>
             </article>
-            <article class="hero-card hero-health">
-              <div class="hero-card-header">
-                <span>Pipeline health</span>
-                <span class="hero-status positive">Stable</span>
-              </div>
-              <div class="hero-health-chart">
-                <div class="hero-health-wheel">
-                  <svg viewBox="0 0 120 120" aria-hidden="true">
-                    <circle cx="60" cy="60" r="48" class="hero-ring-bg"></circle>
-                    <circle cx="60" cy="60" r="48" class="hero-ring" stroke-dasharray="210 360"></circle>
-                  </svg>
-                  <div class="hero-health-score">
-                    <strong>87</strong>
-                    <span>Score</span>
-                  </div>
+            <div class="hero-visual-row">
+              <article class="hero-card hero-health">
+                <div class="hero-card-header">
+                  <span>Pipeline health</span>
+                  <span class="hero-status positive">Stable</span>
                 </div>
-                <ul class="hero-health-list">
-                  <li><span>Stage coverage</span><strong>112%</strong></li>
-                  <li><span>Deal risk flagged</span><strong>5</strong></li>
-                  <li><span>Coachings completed</span><strong>34</strong></li>
+                <div class="hero-health-body">
+                  <div class="hero-health-wheel">
+                    <svg viewBox="0 0 120 120" aria-hidden="true">
+                      <circle cx="60" cy="60" r="48" class="hero-ring-bg"></circle>
+                      <circle cx="60" cy="60" r="48" class="hero-ring" stroke-dasharray="210 360"></circle>
+                    </svg>
+                    <div class="hero-health-score">
+                      <strong>87</strong>
+                      <span>Score</span>
+                    </div>
+                  </div>
+                  <ul class="hero-health-list">
+                    <li><span>Stage coverage</span><strong>112%</strong></li>
+                    <li><span>Risk alerts</span><strong>5</strong></li>
+                    <li><span>Coachings</span><strong>34</strong></li>
+                  </ul>
+                </div>
+              </article>
+              <article class="hero-card hero-notify">
+                <div class="hero-card-header">
+                  <span>Live intelligence feed</span>
+                  <span class="hero-status">Today</span>
+                </div>
+                <ul>
+                  <li>
+                    <span class="hero-pill">Deal save</span>
+                    <div>
+                      <p>Escalate Q4 renewal > schedule exec sponsorship call</p>
+                      <span>Owner: CRO · Confidence 92%</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="hero-pill">Coaching</span>
+                    <div>
+                      <p>Review discovery call for APAC strategic prospect within 24h</p>
+                      <span>Owner: Sales Manager · Confidence 87%</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="hero-pill">Signal</span>
+                    <div>
+                      <p>Spike in product usage for Helios Industrial — route expansion play</p>
+                      <span>Owner: CS Lead · Confidence 79%</span>
+                    </div>
+                  </li>
                 </ul>
-              </div>
-            </article>
-            <article class="hero-card hero-notify">
-              <div class="hero-card-header">
-                <span>Live intelligence feed</span>
-                <span class="hero-status">Today</span>
-              </div>
-              <ul>
-                <li>
-                  <span class="hero-pill">Deal save</span>
-                  <div>
-                    <p>Escalate Q4 renewal > schedule exec sponsorship call</p>
-                    <span>Owner: CRO · Confidence 92%</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="hero-pill">Coaching</span>
-                  <div>
-                    <p>Review discovery call for APAC strategic prospect within 24h</p>
-                    <span>Owner: Sales Manager · Confidence 87%</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="hero-pill">Signal</span>
-                  <div>
-                    <p>Spike in product usage for Helios Industrial — route expansion play</p>
-                    <span>Owner: CS Lead · Confidence 79%</span>
-                  </div>
-                </li>
-              </ul>
-            </article>
+              </article>
+            </div>
             <div class="hero-mini-grid">
               <div class="hero-chip">
                 <span class="hero-chip-label">Top region</span>
