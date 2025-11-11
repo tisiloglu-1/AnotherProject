@@ -523,63 +523,35 @@ a:focus {
 }
 
 .roi-grid {
-  display: flex;
-  gap: 1.8rem;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
 }
 
-.roi-overview,
-.roi-insights {
+.roi-overview {
   display: grid;
-  gap: 1.4rem;
-  flex: 1;
-}
-
-.roi-pillar,
-.metric-card,
-.proof-card {
-  background: linear-gradient(180deg, rgba(18, 35, 58, 0.95), rgba(8, 16, 30, 0.95));
-  border: 1px solid rgba(0, 114, 255, 0.18);
-  border-radius: 20px;
-  padding: 1.6rem 1.8rem;
-  display: grid;
-  gap: 0.8rem;
-  align-content: start;
-  box-shadow: 0 18px 38px rgba(4, 11, 25, 0.24);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .roi-pillar {
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 1.2rem;
-}
-
-.roi-pillar-icon {
-  width: 72px;
-  height: 72px;
+  background: linear-gradient(180deg, rgba(18, 35, 58, 0.95), rgba(8, 16, 30, 0.95));
+  border: 1px solid rgba(0, 114, 255, 0.18);
   border-radius: 20px;
-  background: radial-gradient(circle at 35% 35%, rgba(0, 114, 255, 0.28), rgba(0, 114, 255, 0.08));
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(0, 114, 255, 0.24);
-}
-
-.roi-pillar-icon svg {
-  width: 42px;
-  height: 42px;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.roi-pillar-body {
-  display: grid;
-  gap: 0.6rem;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 20px 40px rgba(4, 11, 25, 0.28);
 }
 
 .roi-pillar h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
-.roi-pillar-copy {
+.roi-pillar p {
   margin: 0;
   color: var(--color-muted);
 }
@@ -592,9 +564,24 @@ a:focus {
   color: rgba(243, 247, 255, 0.8);
 }
 
+.roi-insights {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.metric-stack {
+  display: grid;
+  gap: 1.25rem;
+}
+
 .metric-card {
-  border-color: rgba(0, 114, 255, 0.35);
   background: linear-gradient(160deg, rgba(0, 114, 255, 0.12), rgba(14, 29, 48, 0.95));
+  border: 1px solid rgba(0, 114, 255, 0.35);
+  border-radius: 20px;
+  padding: 1.6rem;
+  box-shadow: 0 18px 40px rgba(0, 114, 255, 0.22);
+  display: grid;
+  gap: 0.6rem;
 }
 
 .metric-label {
@@ -1065,12 +1052,13 @@ a:focus {
   .product-grid,
   .solutions-grid,
   .pricing-grid,
-  .resource-grid {
+  .resource-grid,
+  .testimonial-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .testimonial-grid {
-    grid-template-columns: 1fr;
+  .roi-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .footer-grid {
@@ -1113,6 +1101,10 @@ a:focus {
     grid-template-columns: 1fr;
   }
 
+  .roi-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-visual {
     order: -1;
     flex-direction: column;
@@ -1152,11 +1144,7 @@ a:focus {
     grid-template-columns: 1fr;
   }
 
-  .roi-grid {
-    flex-direction: column;
-  }
-
-  .footer-grid {
+  .roi-overview {
     grid-template-columns: 1fr;
   }
 
