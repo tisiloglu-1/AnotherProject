@@ -762,24 +762,31 @@ a:focus {
   font-weight: 600;
 }
 
+.pricing {
+  position: relative;
+  overflow: hidden;
+  background: rgba(6, 11, 20, 0.92);
+}
+
+.pricing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(6, 11, 20, 0.96) 0%, rgba(6, 11, 20, 0.78) 42%, rgba(0, 114, 255, 0.35) 100%), url('https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  z-index: 0;
+  transform: scale(1.05);
+}
+
+.pricing .container {
+  position: relative;
+  z-index: 1;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 3rem;
-}
-
-.pricing-visual {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-.pricing-visual img {
-  width: min(860px, 100%);
-  border-radius: 28px;
-  object-fit: cover;
-  box-shadow: 0 30px 60px rgba(4, 11, 25, 0.38);
 }
 
 .pricing-card {
@@ -791,11 +798,12 @@ a:focus {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  backdrop-filter: blur(4px);
 }
 
 .pricing-card.highlight {
   border-color: rgba(0, 114, 255, 0.4);
-  background: linear-gradient(180deg, rgba(0, 114, 255, 0.2), rgba(14, 26, 43, 0.9));
+  background: linear-gradient(180deg, rgba(0, 114, 255, 0.28), rgba(14, 26, 43, 0.9));
 }
 
 .price {
