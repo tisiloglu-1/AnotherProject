@@ -529,59 +529,106 @@
     <section id="demo" class="section demo">
       <div class="container demo-grid">
         <div class="demo-copy">
-          <p class="section-label">Book a Demo</p>
-          <h2>See how AURION transforms your revenue operations.</h2>
-          <p>Share your details and our enterprise specialists will tailor a live walkthrough within 24 hours.</p>
+          <div class="demo-badge">Live strategy session</div>
+          <h2>Book a tailored revenue intelligence demo.</h2>
+          <p>See how AURION unifies revenue data, boosts forecast accuracy, and automates coaching in a session built around your KPIs.</p>
           <ul class="demo-benefits">
-            <li>Personalised ROI model</li>
-            <li>Security & integration deep dive</li>
-            <li>Executive-ready rollout plan</li>
+            <li>
+              <span class="benefit-icon" aria-hidden="true">⚡</span>
+              <div>
+                <h4>Precision forecast walkthrough</h4>
+                <p>Model your pipeline and scenario planning live with our revenue strategists.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon" aria-hidden="true">🛡️</span>
+              <div>
+                <h4>Integration & security review</h4>
+                <p>Explore data governance, CRM topology, and enterprise architecture.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon" aria-hidden="true">📈</span>
+              <div>
+                <h4>ROI acceleration plan</h4>
+                <p>Receive a custom playbook outlining launch milestones and success metrics.</p>
+              </div>
+            </li>
           </ul>
-          <div class="demo-media">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=720&q=80" alt="Live product demo taking place in executive boardroom">
+          <div class="demo-cta">
+            <a class="btn primary" href="#" role="button">Schedule my demo</a>
+            <p>No slides — your data, your goals, our AI playbook.</p>
           </div>
         </div>
-        <form class="demo-form" aria-label="Book a demo form">
-          <div class="form-field">
-            <label for="full-name">Full name</label>
-            <input id="full-name" name="full-name" type="text" placeholder="Alex Morgan" required>
+        <div class="demo-panel">
+          <div class="demo-panel-header">
+            <div>
+              <p class="demo-panel-label">Session availability</p>
+              <p class="demo-panel-title">Next 7-day window</p>
+            </div>
+            <span class="demo-panel-tag">Priority booking</span>
           </div>
-          <div class="form-field">
-            <label for="work-email">Work email</label>
-            <input id="work-email" name="work-email" type="email" placeholder="alex@company.com" required>
-          </div>
-          <div class="form-field">
-            <label for="company">Company</label>
-            <input id="company" name="company" type="text" placeholder="Company name" required>
-          </div>
-          <div class="form-field">
-            <label for="role">Role</label>
-            <select id="role" name="role" required>
-              <option value="">Select role</option>
-              <option>VP of Sales / CRO</option>
-              <option>RevOps Leader</option>
-              <option>Sales Manager</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="arr">Annual revenue band</label>
-            <select id="arr" name="arr" required>
-              <option value="">Select range</option>
-              <option>£10M – £50M</option>
-              <option>£50M – £200M</option>
-              <option>£200M+</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="notes">Primary objective</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Tell us about your goals"></textarea>
-          </div>
-          <div class="form-footer">
-            <p class="privacy">By submitting, you agree to our <a href="#">privacy policy</a>. We will respond within one business day.</p>
-            <button class="btn primary" type="submit">Submit</button>
-          </div>
-        </form>
+          <form class="demo-form" aria-label="Book a demo form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="full-name">Full name</label>
+                <input id="full-name" name="full-name" type="text" placeholder="Alex Morgan" required>
+              </div>
+              <div class="form-field">
+                <label for="work-email">Work email</label>
+                <input id="work-email" name="work-email" type="email" placeholder="alex@company.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" placeholder="Company name" required>
+              </div>
+              <div class="form-field">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                  <option value="">Select role</option>
+                  <option>VP of Sales / CRO</option>
+                  <option>RevOps Leader</option>
+                  <option>Sales Manager</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="arr">Annual revenue band</label>
+                <select id="arr" name="arr" required>
+                  <option value="">Select range</option>
+                  <option>£10M – £50M</option>
+                  <option>£50M – £200M</option>
+                  <option>£200M+</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="timeline">Implementation timeline</label>
+                <select id="timeline" name="timeline" required>
+                  <option value="">Select timeline</option>
+                  <option>0 – 3 months</option>
+                  <option>3 – 6 months</option>
+                  <option>6+ months</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="notes">Primary objective</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Tell us about your goals"></textarea>
+            </div>
+            <div class="form-footer">
+              <label class="consent">
+                <input type="checkbox" required>
+                <span>I agree to receive follow-up communication about this session.</span>
+              </label>
+              <button class="btn primary" type="submit">Secure my session</button>
+              <p class="privacy">By submitting, you agree to our <a href="#">privacy policy</a>. We respond within one business day.</p>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
