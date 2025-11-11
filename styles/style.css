@@ -1791,7 +1791,7 @@ footer.site-footer {
   border-radius: 22px;
   border: 1px solid rgba(0, 114, 255, 0.26);
   box-shadow: 0 28px 58px rgba(0, 114, 255, 0.18);
-  padding: 1.4rem;
+  padding: 1.35rem;
   display: grid;
   gap: 1rem;
   position: relative;
@@ -1857,7 +1857,7 @@ footer.site-footer {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.1rem 1.4rem;
+  padding: 1rem 1.3rem;
 }
 
 .hero-pulse-indicator {
