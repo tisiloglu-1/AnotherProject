@@ -1769,16 +1769,62 @@ footer.site-footer {
 
 .hero-visual {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-chart-bg {
+  position: relative;
+  width: min(540px, 92%);
+  height: clamp(300px, 40vw, 360px);
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 114, 255, 0.22);
+  background: linear-gradient(200deg, rgba(14, 29, 48, 0.9), rgba(9, 16, 32, 0.95));
+  box-shadow: 0 28px 60px rgba(0, 114, 255, 0.16);
+}
+
+.hero-background-chart {
+  position: absolute;
+  inset: 20% 10% 30% 10%;
   display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1vw, 0.9rem);
+  align-items: end;
+  opacity: 0.85;
+}
+
+.hero-background-chart .hero-bar {
+  background: linear-gradient(180deg, rgba(0, 114, 255, 0.85), rgba(0, 114, 255, 0.18));
+  border-radius: 12px 12px 6px 6px;
+  box-shadow: 0 16px 24px rgba(0, 114, 255, 0.28);
+  width: 100%;
+}
+
+.hero-chart-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
   gap: 1rem;
-  justify-items: center;
+  background: linear-gradient(0deg, rgba(14, 29, 48, 0.92), rgba(14, 29, 48, 0.3));
+}
+
+.hero-chart-overlay strong {
+  display: block;
+  color: #ffde9e;
+  margin-top: 0.3rem;
 }
 
 .hero-visual-bg {
   position: absolute;
   inset: -18% -10% 10% -10%;
   background: radial-gradient(circle at top, rgba(0, 114, 255, 0.28), rgba(0, 114, 255, 0)),
-              radial-gradient(circle at bottom, rgba(249, 196, 73, 0.24), rgba(249, 196, 73, 0));
+              radial-gradient(circle at bottom, rgba(249, 196, 73, 0.22), rgba(249, 196, 73, 0));
   filter: blur(110px);
   opacity: 0.55;
   pointer-events: none;
@@ -1791,7 +1837,7 @@ footer.site-footer {
   border-radius: 22px;
   border: 1px solid rgba(0, 114, 255, 0.26);
   box-shadow: 0 28px 58px rgba(0, 114, 255, 0.18);
-  padding: 1.35rem;
+  padding: 1.4rem;
   display: grid;
   gap: 1rem;
   position: relative;
@@ -1908,6 +1954,16 @@ footer.site-footer {
 @media (max-width: 900px) {
   .hero-visual-card,
   .hero-quick-stats {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-visual {
+    margin-bottom: 2rem;
+  }
+
+  .hero-chart-bg {
     width: 100%;
   }
 }
