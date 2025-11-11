@@ -420,6 +420,13 @@ a:focus {
   box-shadow: 0 16px 34px rgba(0, 114, 255, 0.24);
 }
 
+.panel-icon.large {
+  width: 96px;
+  height: 96px;
+  border-radius: 32px;
+  box-shadow: 0 20px 40px rgba(0, 114, 255, 0.26);
+}
+
 .panel-icon svg {
   width: 44px;
   height: 44px;
@@ -430,6 +437,10 @@ a:focus {
   background: radial-gradient(circle at 40% 40%, rgba(249, 196, 73, 0.55), rgba(249, 196, 73, 0.18));
   border-color: rgba(249, 196, 73, 0.45);
   box-shadow: 0 18px 38px rgba(249, 196, 73, 0.26);
+}
+
+.product-panel.highlight .panel-icon.large {
+  box-shadow: 0 22px 44px rgba(249, 196, 73, 0.28);
 }
 
 .product-panel.highlight .panel-icon svg {
@@ -445,6 +456,15 @@ a:focus {
 .feature-list {
   padding-left: 1.2rem;
   color: var(--color-muted);
+}
+
+.feature-list.compact {
+  gap: 0.4rem;
+  display: grid;
+}
+
+.feature-list.compact li {
+  margin-bottom: 0;
 }
 
 .feature-list li {
