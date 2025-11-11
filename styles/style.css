@@ -1337,6 +1337,10 @@ a:focus {
   gap: 1.2rem;
 }
 
+footer.site-footer {
+  margin-top: clamp(4rem, 8vw, 6rem);
+}
+
 @media (max-width: 800px) {
   .footer-grid {
     flex-direction: column;
