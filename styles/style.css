@@ -242,8 +242,8 @@ a:focus {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
-  gap: clamp(2rem, 5vw, 3rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(2.2rem, 6vw, 3.2rem);
   align-items: stretch;
 }
 
@@ -344,148 +344,48 @@ a:focus {
 
 .hero-visual {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 0.7fr) minmax(0, 0.3fr);
-  gap: 1.2rem;
-  align-items: start;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-visual-bg {
   position: absolute;
-  inset: -15% -20% 10% -20%;
-  background: radial-gradient(circle at top, rgba(0, 114, 255, 0.32), rgba(0, 114, 255, 0)),
-              radial-gradient(circle at bottom, rgba(249, 196, 73, 0.22), rgba(249, 196, 73, 0));
-  filter: blur(90px);
-  opacity: 0.55;
-  z-index: 0;
+  inset: -18% -15% 12% -15%;
+  background: radial-gradient(circle at top, rgba(0, 114, 255, 0.3), rgba(0, 114, 255, 0)),
+              radial-gradient(circle at bottom, rgba(249, 196, 73, 0.2), rgba(249, 196, 73, 0));
+  filter: blur(110px);
+  opacity: 0.6;
   pointer-events: none;
+  z-index: 0;
 }
 
-.hero-visual-grid {
+.hero-visual-stack {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  width: min(500px, 100%);
   z-index: 1;
 }
 
 .hero-card {
   width: 100%;
-  max-width: 260px;
-  padding: 1.3rem;
-  box-shadow: 0 22px 42px rgba(0, 114, 255, 0.18);
+  padding: 1.4rem;
+  box-shadow: 0 24px 46px rgba(0, 114, 255, 0.18);
 }
 
 .hero-card.hero-forecast {
-  grid-column: 1 / -1;
-  max-width: 520px;
-  justify-self: center;
+  max-width: 100%;
 }
 
 .hero-card.hero-health,
 .hero-card.hero-notify {
-  max-width: 260px;
+  max-width: 100%;
 }
 
-.hero-health-chart {
+.hero-mini-grid {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  align-items: center;
-  z-index: 1;
-}
-
-.hero-health-wheel {
-  position: relative;
-  width: 84px;
-  height: 84px;
-}
-
-.hero-health-wheel svg {
-  width: 100%;
-  height: 100%;
-  transform: rotate(-90deg);
-}
-
-.hero-ring-bg {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.12);
-  stroke-width: 12;
-}
-
-.hero-ring {
-  fill: none;
-  stroke: rgba(249, 196, 73, 0.8);
-  stroke-width: 12;
-  stroke-linecap: round;
-}
-
-.hero-health-score {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: rgba(243, 247, 255, 0.85);
-}
-
-.hero-health-score strong {
-  font-size: 1.3rem;
-  color: #ffde9e;
-}
-
-.hero-health-score span {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(243, 247, 255, 0.55);
-}
-
-.hero-health-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: rgba(243, 247, 255, 0.68);
-}
-
-.hero-health-list li {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hero-card.hero-notify ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.8rem;
-  z-index: 1;
-}
-
-.hero-card.hero-notify li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.7rem;
-  align-items: start;
-}
-
-.hero-card.hero-notify span {
-  font-size: 0.85rem;
-  color: rgba(243, 247, 255, 0.62);
-}
-
-.hero-card.hero-notify p {
-  margin: 0 0 0.2rem;
-}
-
-.hero-side-metrics {
-  display: grid;
-  gap: 0.9rem;
-  align-content: start;
-  z-index: 1;
 }
 
 .hero-chip {
@@ -496,7 +396,7 @@ a:focus {
   backdrop-filter: blur(4px);
   display: grid;
   gap: 0.3rem;
-  min-width: 180px;
+  color: rgba(243, 247, 255, 0.78);
 }
 
 .hero-chip-label {
@@ -504,10 +404,6 @@ a:focus {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(249, 196, 73, 0.75);
-}
-
-.hero-chip strong {
-  color: rgba(243, 247, 255, 0.85);
 }
 
 .hero-glow {
@@ -1614,12 +1510,6 @@ a:focus {
 
   .hero-visual {
     order: -1;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .hero-card.hero-dashboard {
-    grid-column: 1 / -1;
-    max-width: 100%;
   }
 
   .testimonial-carousel {
