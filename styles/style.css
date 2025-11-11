@@ -639,27 +639,29 @@ a:focus {
   margin-top: 3rem;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .testimonial-track {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  gap: 2rem;
   overflow: hidden;
-  flex: 1;
+  width: 100%;
+  scroll-behavior: smooth;
 }
 
 .testimonial-card {
+  flex: 0 0 min(520px, 85vw);
   background: linear-gradient(160deg, rgba(249, 196, 73, 0.2), rgba(14, 29, 48, 0.96));
-  border: 1px solid rgba(249, 196, 73, 0.4);
+  border: 1px solid rgba(249, 196, 73, 0.35);
   border-radius: 24px;
   padding: 2.2rem;
-  box-shadow: 0 18px 44px rgba(249, 196, 73, 0.24);
+  box-shadow: 0 18px 44px rgba(249, 196, 73, 0.22);
   display: grid;
   gap: 1.2rem;
-  transform: scale(0.96);
-  opacity: 0.6;
+  transform: scale(0.94);
+  opacity: 0.55;
   transition: transform 0.4s ease, opacity 0.4s ease, border-color 0.4s ease;
 }
 
@@ -707,7 +709,7 @@ a:focus {
 }
 
 .testimonial-nav {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   color: rgba(243, 247, 255, 0.75);
   width: 44px;
   height: 44px;
@@ -1155,24 +1157,12 @@ a:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .testimonial-track {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .roi-overview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 900px) {
-  .nav-toggle {
-    display: block;
-  }
-
   .primary-nav {
     position: absolute;
     top: 100%;
@@ -1218,21 +1208,11 @@ a:focus {
   }
 
   .testimonial-track {
-    grid-template-columns: 1fr;
+    justify-content: center;
   }
 
   .testimonial-nav {
     display: none;
-  }
-
-  .comparison-table {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-meta {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
   }
 }
 
@@ -1259,7 +1239,7 @@ a:focus {
   }
 
   .testimonial-track {
-    grid-template-columns: 1fr;
+    justify-content: center;
   }
 
   .pricing-visual img {

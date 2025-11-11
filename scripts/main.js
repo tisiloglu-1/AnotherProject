@@ -91,4 +91,82 @@ if (header) {
   onScroll();
 }
 
+// Testimonials carousel
+const testimonialTrack = document.querySelector('.testimonial-track');
+const testimonialCards = testimonialTrack ? Array.from(testimonialTrack.querySelectorAll('.testimonial-card')) : [];
+const testimonialPrev = document.querySelector('.testimonial-nav.prev');
+const testimonialNext = document.querySelector('.testimonial-nav.next');
+const testimonialIndicators = document.querySelector('.testimonial-indicators');
+
+if (testimonialTrack && testimonialCards.length > 0) {
+  let currentTestimonialIndex = 0;
+
+  const ensureIndicators = () => {
+    if (!testimonialIndicators) return;
+    if (testimonialIndicators.children.length === testimonialCards.length) return;
+    testimonialIndicators.innerHTML = '';
+    testimonialCards.forEach((_, index) => {
+      const indicator = document.createElement('button');
+      indicator.type = 'button';
+      indicator.className = 'indicator';
+      indicator.setAttribute('aria-label', `Show testimonial ${index + 1}`);
+      indicator.setAttribute('role', 'tab');
+      indicator.addEventListener('click', () => setActiveTestimonial(index));
+      testimonialIndicators.appendChild(indicator);
+    });
+  };
+
+  const updateIndicators = () => {
+    if (!testimonialIndicators) return;
+    testimonialIndicators.querySelectorAll('.indicator').forEach((btn, index) => {
+      const isActive = index === currentTestimonialIndex;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      btn.setAttribute('tabindex', isActive ? '0' : '-1');
+    });
+  };
+
+  const scrollToActiveCard = () => {
+    const activeCard = testimonialCards[currentTestimonialIndex];
+    if (!activeCard) return;
+    const offset = Math.max(0, activeCard.offsetLeft - (testimonialTrack.clientWidth - activeCard.offsetWidth) / 2);
+    testimonialTrack.scrollTo({ left: offset, behavior: 'smooth' });
+  };
+
+  const setActiveTestimonial = (index) => {
+    currentTestimonialIndex = (index + testimonialCards.length) % testimonialCards.length;
+    testimonialCards.forEach((card, cardIndex) => {
+      card.classList.toggle('active', cardIndex === currentTestimonialIndex);
+    });
+    updateIndicators();
+    scrollToActiveCard();
+  };
+
+  ensureIndicators();
+  setActiveTestimonial(0);
+
+  testimonialPrev?.addEventListener('click', () => {
+    setActiveTestimonial(currentTestimonialIndex - 1);
+  });
+
+  testimonialNext?.addEventListener('click', () => {
+    setActiveTestimonial(currentTestimonialIndex + 1);
+  });
+
+  testimonialTrack.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      setActiveTestimonial(currentTestimonialIndex + 1);
+    }
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      setActiveTestimonial(currentTestimonialIndex - 1);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    scrollToActiveCard();
+  });
+}
+
 

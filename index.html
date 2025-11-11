@@ -370,8 +370,8 @@
         </div>
         <div class="testimonial-carousel" role="region" aria-label="Customer testimonials">
           <button class="testimonial-nav prev" aria-label="Previous testimonial">‹</button>
-          <div class="testimonial-track">
-            <article class="testimonial-card active">
+          <div class="testimonial-track" tabindex="0">
+            <article class="testimonial-card active" data-index="0">
               <header>
                 <p class="testimonial-title">Northwind Global</p>
                 <span class="testimonial-role">Maya Chen · Chief Revenue Officer</span>
@@ -382,7 +382,7 @@
                 <a class="inline-link" href="#resources">See methodology</a>
               </footer>
             </article>
-            <article class="testimonial-card">
+            <article class="testimonial-card" data-index="1">
               <header>
                 <p class="testimonial-title">AstraNova Communications</p>
                 <span class="testimonial-role">Liam Ortega · VP Revenue Operations</span>
@@ -393,7 +393,7 @@
                 <a class="inline-link" href="#resources">Explore rollout</a>
               </footer>
             </article>
-            <article class="testimonial-card">
+            <article class="testimonial-card" data-index="2">
               <header>
                 <p class="testimonial-title">Helios Industrial</p>
                 <span class="testimonial-role">Anika Rao · Chief Sales Officer</span>
@@ -404,14 +404,32 @@
                 <a class="inline-link" href="#resources">Read case study</a>
               </footer>
             </article>
+            <article class="testimonial-card" data-index="3">
+              <header>
+                <p class="testimonial-title">Eclipse Analytics</p>
+                <span class="testimonial-role">Jordan Malik · SVP Global Sales</span>
+              </header>
+              <blockquote>“AURION unified CRM, voice, and product telemetry. Forecast calls that took hours now take minutes with drill downs we can trust.”</blockquote>
+              <footer>
+                <p class="testimonial-metric">Pipeline accuracy ↑34%</p>
+                <a class="inline-link" href="#resources">View webinar</a>
+              </footer>
+            </article>
+            <article class="testimonial-card" data-index="4">
+              <header>
+                <p class="testimonial-title">Summit Cloud</p>
+                <span class="testimonial-role">Noelle Bryant · Head of RevOps</span>
+              </header>
+              <blockquote>“We eliminated 40+ hours of manual reporting per month and finally aligned GTM teams around shared revenue intelligence dashboards.”</blockquote>
+              <footer>
+                <p class="testimonial-metric">Manual reporting ↓42 hrs</p>
+                <a class="inline-link" href="#resources">Download playbook</a>
+              </footer>
+            </article>
           </div>
           <button class="testimonial-nav next" aria-label="Next testimonial">›</button>
         </div>
-        <div class="testimonial-indicators" role="tablist" aria-label="Testimonials navigation">
-          <button class="indicator active" aria-label="Show testimonial 1"></button>
-          <button class="indicator" aria-label="Show testimonial 2"></button>
-          <button class="indicator" aria-label="Show testimonial 3"></button>
-        </div>
+        <div class="testimonial-indicators" role="tablist" aria-label="Testimonials navigation"></div>
       </div>
     </section>
 
