@@ -46,39 +46,131 @@
 
   <main>
     <section id="hero" class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Revenue Intelligence OS</p>
-          <h1>The enterprise revenue OS turning every client interaction into predictable growth.</h1>
-          <p class="lead">AURION unifies CRM, call intelligence, and predictive analytics into a single operating system engineered for global sales organizations.</p>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="hero-badge">Enterprise revenue intelligence</div>
+          <h1>Turn every customer interaction into predictable, compounding growth.</h1>
+          <p class="hero-lead">AURION unifies CRM, conversations, and predictive AI so CROs, RevOps, and sales leaders can forecast with confidence, coach at scale, and accelerate revenue execution.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#demo">Book a demo</a>
-            <a class="btn ghost" href="#pricing">View enterprise pricing</a>
+            <a class="btn primary" href="#demo">Book a live demo</a>
+            <button class="hero-video" type="button" aria-label="Play platform overview video">
+              <span class="hero-video-icon" aria-hidden="true">▶</span>
+              <span>Watch 90-second overview</span>
+            </button>
           </div>
-          <div class="hero-proof">
+          <div class="hero-metrics">
             <div>
-              <span class="metric">28%</span>
-              <p>Increase in win rates within 60 days.</p>
+              <span class="metric-value">+28%</span>
+              <span class="metric-label">Win rate uplift in 60 days</span>
             </div>
             <div>
-              <span class="metric">4.9/5</span>
-              <p>Forecast accuracy rating from RevOps teams.</p>
+              <span class="metric-value">2.4×</span>
+              <span class="metric-label">Faster pipeline velocity</span>
+            </div>
+            <div>
+              <span class="metric-value">4.9/5</span>
+              <span class="metric-label">Forecast confidence from RevOps teams</span>
             </div>
           </div>
         </div>
-        <div class="hero-visual">
-          <div class="visual-frame">
-            <div class="visual-orbit">
-              <span class="node node-core">AURION</span>
-              <span class="node">CRM</span>
-              <span class="node">Voice</span>
-              <span class="node">Email</span>
-              <span class="node">Meetings</span>
-              <span class="node">AI Insights</span>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual-bg"></div>
+          <div class="hero-visual-grid">
+            <article class="hero-card hero-forecast">
+              <div class="hero-card-header">
+                <span>Enterprise forecast</span>
+                <span class="hero-status">Live</span>
+              </div>
+              <div class="hero-forecast-chart">
+                <div class="hero-bar" style="height:72%"></div>
+                <div class="hero-bar" style="height:94%"></div>
+                <div class="hero-bar" style="height:66%"></div>
+                <div class="hero-bar" style="height:82%"></div>
+                <div class="hero-bar" style="height:98%"></div>
+              </div>
+              <div class="hero-forecast-summary">
+                <div>
+                  <span class="hero-small-label">Commit</span>
+                  <strong>£48.3M</strong>
+                </div>
+                <div>
+                  <span class="hero-small-label">Upside</span>
+                  <strong>£12.6M</strong>
+                </div>
+                <div>
+                  <span class="hero-small-label">AI confidence</span>
+                  <strong>96%</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="hero-card hero-health">
+              <div class="hero-card-header">
+                <span>Pipeline health</span>
+                <span class="hero-status positive">Stable</span>
+              </div>
+              <div class="hero-health-chart">
+                <div class="hero-health-wheel">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="48" class="hero-ring-bg"></circle>
+                    <circle cx="60" cy="60" r="48" class="hero-ring" stroke-dasharray="210 360"></circle>
+                  </svg>
+                  <div class="hero-health-score">
+                    <strong>87</strong>
+                    <span>Score</span>
+                  </div>
+                </div>
+                <ul class="hero-health-list">
+                  <li><span>Stage coverage</span><strong>112%</strong></li>
+                  <li><span>Deal risk flagged</span><strong>5</strong></li>
+                  <li><span>Coachings completed</span><strong>34</strong></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="hero-card hero-notify">
+              <div class="hero-card-header">
+                <span>Live intelligence feed</span>
+                <span class="hero-status">Today</span>
+              </div>
+              <ul>
+                <li>
+                  <span class="hero-pill">Deal save</span>
+                  <div>
+                    <p>Escalate Q4 renewal > schedule exec sponsorship call</p>
+                    <span>Owner: CRO · Confidence 92%</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hero-pill">Coaching</span>
+                  <div>
+                    <p>Review discovery call for APAC strategic prospect within 24h</p>
+                    <span>Owner: Sales Manager · Confidence 87%</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hero-pill">Signal</span>
+                  <div>
+                    <p>Spike in product usage for Helios Industrial — route expansion play</p>
+                    <span>Owner: CS Lead · Confidence 79%</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="hero-side-metrics">
+            <div class="hero-chip">
+              <span class="hero-chip-label">Top region</span>
+              <strong>North America</strong>
             </div>
-            <div class="visual-highlight">
-              <p>Predictive Pipeline Health</p>
-              <span class="trend positive">+18% this quarter</span>
+            <div class="hero-chip">
+              <span class="hero-chip-label">Largest deal</span>
+              <strong>£2.6M · Stage 4</strong>
+            </div>
+            <div class="hero-chip">
+              <span class="hero-chip-label">Cycle time</span>
+              <strong>21 days · ↓18%</strong>
             </div>
           </div>
         </div>
