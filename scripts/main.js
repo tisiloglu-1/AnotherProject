@@ -169,4 +169,62 @@ if (testimonialTrack && testimonialCards.length > 0) {
   });
 }
 
+const metricCards = document.querySelectorAll('.metric-card[data-metric]');
+const metricModals = document.querySelectorAll('.metric-modal');
+let lastFocusedElement = null;
+
+const closeAllMetricModals = () => {
+  metricModals.forEach((modal) => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  });
+  document.body.classList.remove('modal-open');
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+    lastFocusedElement = null;
+  }
+};
+
+const openMetricModal = (id, trigger) => {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  closeAllMetricModals();
+  lastFocusedElement = trigger;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  const focusTarget = modal.querySelector('.metric-modal-close') || modal;
+  focusTarget.focus();
+};
+
+metricCards.forEach((card) => {
+  card.setAttribute('aria-haspopup', 'dialog');
+  card.addEventListener('click', () => openMetricModal(card.dataset.metric, card));
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openMetricModal(card.dataset.metric, card);
+    }
+  });
+});
+
+metricModals.forEach((modal) => {
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      closeAllMetricModals();
+    }
+  });
+  const closeButton = modal.querySelector('.metric-modal-close');
+  closeButton?.addEventListener('click', closeAllMetricModals);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    const isOpen = Array.from(metricModals).some((modal) => modal.classList.contains('open'));
+    if (isOpen) {
+      closeAllMetricModals();
+    }
+  }
+});
+
 

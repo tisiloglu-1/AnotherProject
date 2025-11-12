@@ -400,28 +400,113 @@
             </article>
           </div>
           <div class="roi-insights">
-            <div class="metric-stack">
-              <div class="metric-card">
+            <div class="metric-stack" role="list">
+              <button type="button" class="metric-card" data-metric="metric-forecast">
                 <span class="metric-label">Forecast confidence</span>
                 <span class="metric-value">+32%</span>
                 <p>Average increase in week-two forecast accuracy across enterprise deployments.</p>
-              </div>
-              <div class="metric-card">
+                <span class="metric-cta">View proof</span>
+              </button>
+              <button type="button" class="metric-card" data-metric="metric-productivity">
                 <span class="metric-label">Productivity reclaimed</span>
                 <span class="metric-value">45 hrs</span>
                 <p>RevOps time saved each month through automated reporting and deduplication.</p>
-              </div>
-              <div class="metric-card">
+                <span class="metric-cta">Explore how</span>
+              </button>
+              <button type="button" class="metric-card" data-metric="metric-velocity">
                 <span class="metric-label">Pipeline velocity</span>
                 <span class="metric-value">2.4×</span>
                 <p>Acceleration in qualified pipeline progression within the first 90 days.</p>
-              </div>
-              <div class="metric-card">
+                <span class="metric-cta">See playbook</span>
+              </button>
+              <button type="button" class="metric-card" data-metric="metric-execution">
                 <span class="metric-label">Deal execution</span>
                 <span class="metric-value">+18 pts</span>
                 <p>Lift in win rate for teams using AURION playbooks and coaching intelligence.</p>
-              </div>
+                <span class="metric-cta">Reveal insights</span>
+              </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="metric-modals" aria-live="polite">
+        <div class="metric-modal" id="metric-forecast" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="metric-forecast-title">
+          <div class="metric-modal-content">
+            <button type="button" class="metric-modal-close" aria-label="Close forecast confidence insights"></button>
+            <span class="metric-modal-label">Deep dive</span>
+            <h3 id="metric-forecast-title">Forecast confidence uplift</h3>
+            <p>Predictive confidence scores, scenario planning, and region-level transparency compress forecast variance to under 3%.</p>
+            <div class="metric-visual chart-bars" aria-hidden="true">
+              <span style="height:40%"></span>
+              <span style="height:55%"></span>
+              <span style="height:70%"></span>
+              <span style="height:88%"></span>
+              <span style="height:96%"></span>
+            </div>
+            <ul>
+              <li>Scenario generator simulates quarter-end risk in seconds.</li>
+              <li>Executive dashboards sync in real time across 14 regions.</li>
+              <li>Confidence thresholds trigger alerts ahead of reviews.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="metric-modal" id="metric-productivity" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="metric-productivity-title">
+          <div class="metric-modal-content">
+            <button type="button" class="metric-modal-close" aria-label="Close productivity insights"></button>
+            <span class="metric-modal-label">Deep dive</span>
+            <h3 id="metric-productivity-title">RevOps productivity reclaimed</h3>
+            <p>Automated data hygiene and reporting eliminate manual effort so RevOps can focus on strategic growth plays.</p>
+            <div class="metric-visual chart-grid" aria-hidden="true">
+              <div class="chart-tile active"></div>
+              <div class="chart-tile"></div>
+              <div class="chart-tile active"></div>
+              <div class="chart-tile"></div>
+              <div class="chart-tile"></div>
+              <div class="chart-tile active"></div>
+            </div>
+            <ul>
+              <li>Activity capture bots auto-log calls, meetings, and emails.</li>
+              <li>Weekly executive packs generated with zero manual effort.</li>
+              <li>AI deduplication resolves routing conflicts instantly.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="metric-modal" id="metric-velocity" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="metric-velocity-title">
+          <div class="metric-modal-content">
+            <button type="button" class="metric-modal-close" aria-label="Close pipeline velocity insights"></button>
+            <span class="metric-modal-label">Deep dive</span>
+            <h3 id="metric-velocity-title">Pipeline velocity acceleration</h3>
+            <p>Advance the right opportunities faster with stage-level predictions and proactive playbooks.</p>
+            <div class="metric-visual chart-flow" aria-hidden="true">
+              <div class="flow-node">Prospect</div>
+              <div class="flow-node">Pipeline</div>
+              <div class="flow-node">Negotiation</div>
+              <div class="flow-node highlight">Closed Won</div>
+            </div>
+            <ul>
+              <li>Deal scoring prioritizes opportunities with 7% higher close probability.</li>
+              <li>Stage velocity analytics highlight stalls within hours.</li>
+              <li>AI nudges align seller actions with buyer engagement signals.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="metric-modal" id="metric-execution" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="metric-execution-title">
+          <div class="metric-modal-content">
+            <button type="button" class="metric-modal-close" aria-label="Close deal execution insights"></button>
+            <span class="metric-modal-label">Deep dive</span>
+            <h3 id="metric-execution-title">Deal execution elevated</h3>
+            <p>Revenue teams rally around shared intelligence for coaching, objections, and mutual action plans.</p>
+            <div class="metric-visual chart-radar" aria-hidden="true">
+              <svg viewBox="0 0 140 140" role="img" aria-hidden="true">
+                <polygon points="70,10 126,45 105,120 35,120 14,45" fill="rgba(0, 114, 255, 0.12)" stroke="rgba(0, 114, 255, 0.4)" stroke-width="2"></polygon>
+                <polygon points="70,26 112,52 95,110 45,110 28,52" fill="rgba(249, 196, 73, 0.35)" stroke="rgba(249, 196, 73, 0.6)" stroke-width="2"></polygon>
+              </svg>
+            </div>
+            <ul>
+              <li>Call intelligence surfaces objection patterns with recommended responses.</li>
+              <li>Manager dashboards deliver weekly coaching priorities.</li>
+              <li>Mutual success plans keep sellers and buyers aligned.</li>
+            </ul>
           </div>
         </div>
       </div>
