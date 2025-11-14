@@ -20,21 +20,26 @@
   <header class="site-header">
     <div class="container nav-container">
       <a class="brand" href="#hero" aria-label="AURION home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor" opacity="0.8"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
         <span class="brand-name">AURION</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
-        <span class="visually-hidden">Toggle navigation</span>
       </button>
       <nav id="primary-nav" class="primary-nav">
         <ul>
-          <li><a href="#product">Product</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#company">Company</a></li>
+          <li><a href="#product"><span>Product</span></a></li>
+          <li><a href="#solutions"><span>Solutions</span></a></li>
+          <li><a href="#pricing"><span>Pricing</span></a></li>
+          <li><a href="#company"><span>Company</span></a></li>
         </ul>
       </nav>
       <div class="nav-cta">
